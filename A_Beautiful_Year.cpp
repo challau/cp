@@ -1,13 +1,28 @@
 #include<bits/stdc++.h>
 using namespace std;
+
+bool distinct(int n){
+    string s = to_string(n);
+
+    for(int i = 0; i < n; i++){
+        for(int j = i + 1; j < s.size(); j++){
+            if(s[i] == s[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
 int main(){
-    long long n;
+    int n;
     cin >> n;
 
-    if(n < 2013){
-        cout<< 2013 << endl;
-    }else{
-        cout<< n + 1 << endl;
+    n++;
+
+    while(!distinct(n)){
+        n++;
     }
+
+    cout<< n << endl;
     return 0;
 }
