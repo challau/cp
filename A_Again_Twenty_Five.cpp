@@ -1,11 +1,18 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+
+int main() {
     int n;
     cin >> n;
-    cout<<25<<endl;
+
+    // code here
+    int num = 1;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= i; j++){
+            cout<<num <<" ";
+            num++;
+        }
+        cout<<"\n";
+    }
     return 0;
 }
